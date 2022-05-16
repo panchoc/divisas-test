@@ -1,9 +1,13 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { IndicatorPricesComponent } from './indicator-prices/indicator-prices.component';
 import { IndicatorDetailsComponent } from './indicator-details/indicator-details.component';
 import { PagesRoutingModule } from './pages-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgChartsModule } from 'ng2-charts';
+import { UiModule } from '../ui/ui.module';
+
 
 
 
@@ -11,11 +15,19 @@ import { PagesRoutingModule } from './pages-routing.module';
   declarations: [
     HomeComponent,
     IndicatorPricesComponent,
-    IndicatorDetailsComponent
+    IndicatorDetailsComponent,
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    HttpClientModule,
+    NgChartsModule,
+    
+    
+  ],
+
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class PagesModule { }

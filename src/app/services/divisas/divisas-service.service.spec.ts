@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DivisasServiceService } from './divisas-service.service';
+import { DivisasService } from './divisas-service.service';
 
-describe('DivisasServiceService', () => {
-  let service: DivisasServiceService;
+describe('DivisasService', () => {
+  let service: DivisasService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DivisasServiceService);
+    service = TestBed.inject(DivisasService);
   });
 
   it('should be created', () => {

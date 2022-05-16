@@ -12,10 +12,10 @@ const routes : Routes = [
         path:'home', component:HomeComponent
       },
       {
-        path:'indicator-details', component:IndicatorDetailsComponent
+        path:'indicator-details/:indicador', component:IndicatorDetailsComponent
       },
       {
-        path:'indicator-prices', component:IndicatorPricesComponent
+        path:'indicator-prices/:indicador', component:IndicatorPricesComponent
       },
       {
         path:'**', redirectTo:'home'

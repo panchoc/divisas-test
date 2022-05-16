@@ -1,1 +1,19 @@
-<p>indicator-prices works!</p>
+<header>{{detalle.nombre}}</header>
+<table class="table table-borderless">
+    
+    <thead>
+        
+      <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of detalle.serie">
+        <th scope="row">{{item.fecha}}</th>
+        <td>{{item.valor}}</td>
+      
+      </tr>
+     
+    </tbody>
+  </table>

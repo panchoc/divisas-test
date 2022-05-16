@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DivisasService } from 'src/app/services/divisas/divisas-service.service';
+import { divisas } from '../interfaces/divisas.interface';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public divisas : Array<divisas> = []
 
-  ngOnInit(): void {
+  constructor(private _divisasService: DivisasService) { }
+
+  async ngOnInit() {
+    await this.getDivisas()
+    
+
+  }
+
+  getDivisas = async () => {
+    this._divisasService.getAllIndicators()
+      .subscribe(response => {
+        this.divisas = response
+      })
   }
 
 }
