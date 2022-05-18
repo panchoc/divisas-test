@@ -21,3 +21,12 @@ export interface detalle {
         }
     ]
 }
+
+export interface serie {
+    
+        
+            fecha?: string,
+            valor?: number
+        
+    
+}

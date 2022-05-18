@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { IndicatorPricesComponent } from './indicator-prices/indicator-prices.component';
@@ -22,12 +22,14 @@ import { UiModule } from '../ui/ui.module';
     PagesRoutingModule,
     HttpClientModule,
     NgChartsModule,
+    UiModule
     
     
   ],
 
   schemas:[
-    CUSTOM_ELEMENTS_SCHEMA
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ]
 })
 export class PagesModule { }

@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { UiModule } from './ui/ui.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
+    UiModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

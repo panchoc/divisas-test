@@ -1,19 +1,48 @@
-<header>{{detalle.nombre}}</header>
-<table class="table table-borderless">
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <nav class="navbar bg-light navbar-expand-sm">
+      <div class="container-fluid">
+        <div class="col">
+          <a class="back" href="/home" class="navbar-brand"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 20 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+          </svg>Indicadores</a>
+        </div>
+        <div class="col">
+          {{detalle.nombre}}
+        </div>
+        <div class="col">
+        </div>
+      </div>
+    </nav>
+  </header>
+<body class="near-moon-gradient">
+
+  <div class="table-prices">
+    <table class="table table-borderless table-striped table-hover table-responsive-sm">
     
-    <thead>
+      <thead>
+          
+        <tr>
+          <th scope="col">Fecha</th>
+          <th scope="col">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of detalle.serie">
+          <th scope="row">{{item.fecha}}</th>
+          <td>{{item.valor}}</td>
         
-      <tr>
-        <th scope="col">Fecha</th>
-        <th scope="col">Precio</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of detalle.serie">
-        <th scope="row">{{item.fecha}}</th>
-        <td>{{item.valor}}</td>
-      
-      </tr>
-     
-    </tbody>
-  </table>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+  
+</body>
+</html>
+
+
+
+
+

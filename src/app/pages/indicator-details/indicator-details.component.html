@@ -1,8 +1,31 @@
-<header>{{detalle.nombre}}</header>
+<!DOCTYPE html>
+<html lang="en">
+<header>
+  <nav class="navbar bg-light navbar-expand-sm">
+    <div class="container-fluid">
+      <div class="col">
+        <a style="float: left;" class="back" href="/home" class="navbar-brand"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 20 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        </svg>Indicadores</a>
+      </div>
+      <div class="col">
+       {{detalle.nombre}}
+      </div>
+      <div class="col">
+       
+      </div>
+      
+      
+      
+    </div>
+  </nav>
+</header>
+  
 
-<h1>${{lastValue}}</h1>
-
-<table class="table table-borderless">
+<body class="near-moon-gradient">
+  <h1> {{symbol(unit)}} {{lastValue}}</h1>
+  <div class="table-detail">
+  <table class="table table-borderless table-striped table-hover table-responsive-sm">
     
     <tbody>
       <tr >
@@ -14,12 +37,18 @@
         <td>{{lastDate}}</td>
       </tr>
       <tr >
-        <th>Unidad de medida</th>
+        <th>Unidad</th>
         <td>{{detalle.unidad_medida}}</td>
       </tr>
      
     </tbody>
   </table>
+</div>
 
+
+
+  <app-chart [dates]="serie"></app-chart>
+</body>
+</html>
 
   

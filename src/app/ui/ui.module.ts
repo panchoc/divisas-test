@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChartComponent } from './chart/chart.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 
@@ -7,9 +9,19 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     
+  
+    ChartComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgChartsModule
   ],
+  exports:[
+    ChartComponent,
+    NgChartsModule
+  ],
+  schemas:[
+    NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class UiModule { }
